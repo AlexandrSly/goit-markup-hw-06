@@ -502,21 +502,6 @@ html {
 .check-link {
   color: var(--main-link-color);
 }
-/* 
-.check-text::before {
-  content: '';
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 3px;
-  margin-right: 5px;
-}
-.input-check:checked + .check-text::before {
-  background-color: var(--main-link-color);
-  border-color: transparent;
-  background-image: url(../images/mark.svg);
-  background-repeat: no-repeat;
-} */
 
 .check-text span {
   width: 16px;
@@ -993,9 +978,14 @@ html {
 .subscribe-input:focus {
   border-color: var(--main-link-color);
 }
-.subscribe-input-icon::after {
+.subscribe-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
 }
 
-.subscribe-btn {
+.subscribe-wrap {
   display: flex;
+  position: relative;
 }
