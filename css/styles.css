@@ -345,9 +345,11 @@ html {
   transform: translate(-50%, -50%) scale(0.7);
 }
 
+/* ----------------Modal---------------- */
+
 .modal {
-  height: 528px;
-  width: 581px;
+  height: 581px;
+  width: 528px;
   background: #ffffff;
   position: absolute;
   top: 50%;
@@ -379,6 +381,165 @@ html {
   background-color: var(--main-link-color);
   color: #ffffff;
 }
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 30px;
+}
+
+.input-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.input-label span {
+  margin-bottom: 4px;
+  display: block;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: #212121;
+  font-size: 16px;
+  padding-left: 42px;
+  outline: transparent;
+}
+
+.modal-input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-input:focus {
+  border-color: var(--main-link-color);
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--main-link-color);
+}
+
+.modal-textarea-block {
+  display: block;
+  padding-bottom: 4px;
+  font-size: 12px;
+}
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  display: block;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+  outline: transparent;
+}
+
+.modal-textarea:focus {
+  border-color: var(--main-link-color);
+}
+
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-field {
+  margin-bottom: 30px;
+}
+
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.input-check {
+}
+
+.check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+}
+.check-link {
+  color: var(--main-link-color);
+}
+/* 
+.check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.input-check:checked + .check-text::before {
+  background-color: var(--main-link-color);
+  border-color: transparent;
+  background-image: url(../images/mark.svg);
+  background-repeat: no-repeat;
+} */
+
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--main-link-color);
+  border-color: transparent;
+  fill: #ffffff;
+}
+
+.input-check:focus + .check-text span {
+  border-color: var(--main-link-color);
+}
+
 /* ----------------Переваги---------------- */
 
 .benefits {
@@ -414,9 +575,6 @@ html {
   margin-bottom: 0;
   line-height: 1.71;
   width: 270px;
-}
-.benefits-icon {
-  max-width: ;
 }
 
 /* ------------- Опис послуг--------------- */
@@ -523,8 +681,6 @@ html {
 
 .team-person {
   background: #ffffff;
-  /* material shadow v1 */
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -700,9 +856,6 @@ html {
 
 .portfolio-block {
   position: relative;
-  /* transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out; */
   overflow: hidden;
 }
 
@@ -712,11 +865,9 @@ html {
   position: absolute;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  /* transition: transform; */
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-timing-function);
-  /* overflow: hidden; */
   padding: 20px 43px;
   font-size: 18px;
   line-height: 1.56;
@@ -748,6 +899,7 @@ html {
 
 .footer-link {
   font-style: normal;
+  width: 231px;
 }
 
 .footer-logo {
@@ -771,6 +923,10 @@ html {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.foter-soc {
+  margin-right: 83px;
 }
 /* тест соц */
 .footer-soc-list {
@@ -805,4 +961,41 @@ html {
 
 .footer-soc-icon {
   fill: currentColor;
+}
+
+.subscribe-form {
+  display: flex;
+  position: relative;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 12px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+  color: #ffffff;
+}
+
+.subscribe-input:focus {
+  border-color: var(--main-link-color);
+}
+.subscribe-input-icon::after {
+}
+
+.subscribe-btn {
+  display: flex;
 }

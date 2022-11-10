@@ -345,6 +345,7 @@
       </div>
     </section>
   </main>
+  <!------------------------------------ footer ------------------------------------>
   <footer class="footer">
     <div class="container">
       <div class="conteiner-logo">
@@ -364,7 +365,7 @@
           </ul>
         </address>
       </div>
-      <div>
+      <div class="foter-soc">
         <p class="footer-title">приєднуйтесь</p>
         <ul class="footer-soc-list list">
           <li class="footer-soc-item">
@@ -399,17 +400,71 @@
           </li>
         </ul>
       </div>
+      <div class="subscribe-container">
+        <p class="subscribe-title">Підпишіться на розсилку</p>
+        <form class="subscribe-form">
+
+          <div class="subscribe-wrap">
+            <input type="text" name="user-name" class="subscribe-input" id="user-name" placeholder="E-mail">
+
+          </div>
+          <div>
+            <button type="submit" class="subscribe-btn btn">Підписатися</button>
+            <svg class="subscribe-input-icon" width="24px" height="24px">
+              <use href="./images/symbol.svg#icon-telegram"></use>
+            </svg>
+          </div>
+        </form>
+      </div>
     </div>
   </footer>
+  <!------------------------------------ Modal ------------------------------------>
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil esse illum ut tempore, fugiat dolorem,
-        magni sint beatae unde illo nostrum id recusandae rerum animi obcaecati alias omnis sit.</p>
       <button type="button" data-modal-close class="modal-close">
         <svg class="modal-icon-x" width="18px" height="18px">
           <use href="./images/symbol.svg#icon-x"></use>
         </svg>
       </button>
+      <p class="modal-title">Залиште свої дані, ми вам передзвонимо
+      </p>
+      <form class="modal-form">
+        <label for="user-name" class="modal-label">Ім'я</label>
+        <div class="input-wrap">
+          <input type="text" name="user-name" class="modal-input" id="user-name" required>
+          <svg class="modal-input-icon" width="18px" height="18px">
+            <use href="./images/symbol.svg#icon-person"></use>
+          </svg>
+        </div>
+        <label for="user-phone" class="modal-label">Телефон</label>
+        <div class="input-wrap">
+          <input type="tel" name="user-phone" class="modal-input" id="user-phone" required>
+          <svg class="modal-input-icon" width="18px" height="18px">
+            <use href="./images/symbol.svg#icon-phone"></use>
+          </svg>
+        </div>
+        <label for="user-mail" class="modal-label">Пошта</label>
+        <div class="input-wrap">
+          <input type="email" name="user-mail" class="modal-input" id="user-mail" required>
+          <svg class="modal-input-icon" width="18px" height="18px">
+            <use href="./images/symbol.svg#icon-email"></use>
+          </svg>
+        </div>
+        <label class="modal-textarea-block" for="modal-textarea">Коментар</label>
+        <textarea class="modal-textarea" name="modal-textarea" id="modal-textarea"
+          placeholder="Введіть текст"></textarea>
+        <div class="modal-field">
+          <input type="checkbox" name="privacy" id="privacy" class="input-check visually-hidden">
+          <label for="privacy" class="check-text">
+            <span>
+              <svg class="check-icon" width="16px" height="15px">
+                <use href="./images/symbol.svg#icon-mark"></use>
+              </svg>
+            </span> Погоджуюся з розсилкою та приймаю <a href="" class="check-link link">Умови
+              договору</a></label>
+        </div>
+        <button type="submit" class="modal-btn btn">Відправити</button>
+      </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>
