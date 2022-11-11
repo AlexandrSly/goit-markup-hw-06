@@ -953,6 +953,13 @@ html {
   position: relative;
 }
 
+input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .subscribe-title {
   font-weight: 700;
   font-size: 14px;
@@ -978,6 +985,15 @@ html {
 .subscribe-input:focus {
   border-color: var(--main-link-color);
 }
+
+/* .subscribe-input:placeholder {
+  font-size: 160px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+} */
 
 .subscribe-wrap {
 }
