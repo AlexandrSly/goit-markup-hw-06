@@ -986,4 +986,12 @@ html {
 }
 
 .subscribe-input-icon {
+  fill: #ffffff;
+  transition-property: color background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.subscribe-btn:hover .subscribe-input-icon {
+  fill: var(--main-btn-color);
 }
